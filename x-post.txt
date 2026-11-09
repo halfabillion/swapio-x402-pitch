@@ -1,0 +1,17 @@
+The Drift Rebalancer: an agent that pays Swap.io only when it actually trades.
+
+It watches a portfolio. When drift crosses 5%, it hits hermes.swap.io for a quote.
+
+x402 flow in four beats:
+1) request a quote
+2) get HTTP 402 (payment required)
+3) pay a fraction of a cent in USDC
+4) receive the quote — then build the swap
+
+No API key. No monthly seat. Idle = $0. You only pay when the agent trades.
+
+Agent API: https://hermes.swap.io
+Product: https://swap.io
+
+@swapdotio @Superteam
+#x402 #Solana
